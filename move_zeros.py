@@ -1,5 +1,5 @@
 class Solution:
-    def moveZeroes(self, nums: list[int]) -> None:
+    def moveZeroes_simple(self, nums: list[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -10,6 +10,16 @@ class Solution:
         for i in zero_ids:
             nums.remove(0)
         nums.extend([0]*num_zeros)
+
+        def moveZeroes(self, nums: list[int]) -> None:
+            j=0 
+            for i in range(0,len(nums)):
+                if nums[i]!=0 and nums[j]==0:
+                    #swap the two
+                    nums[i],nums[j] = nums[j],nums[i]
+                if nums[j]!=0:
+                    j=j+1
+            pass
 
         
 if __name__ == "__main__":
