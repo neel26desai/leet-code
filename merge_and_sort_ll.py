@@ -7,7 +7,7 @@ class ListNode:
 class Solution:
     def mergeTwoLists(self, list1, list2):
         #first merge 2 linked list
-        #we'll merge both in new list
+        #we'll merge both in new list   
         #check if the first list is not empty, if its not point the last element to the first element of list2,
         current = list1
         head = current
